@@ -15,6 +15,7 @@ Meteor.startup(function () {
 
             if (!user || user.name !== valid.name || user.pass !== valid.pass) {
                 res.statusCode = 401;
+                res.setHeader('WWW-Authenticate', 'Basic realm="Promised Land"');
                 res.end('Access denied');
             } else {
                 next();
