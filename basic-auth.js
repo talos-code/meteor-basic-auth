@@ -1,6 +1,5 @@
 Meteor.startup(function () {
     if (process.env.RESTRICT_ENV) {
-
         // Ensure credentials are provided
         if (!Meteor.settings.basicAuth) {
             throw new Error("[talos:basic-auth] No credentials were found in your meteor settings");
